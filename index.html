@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Ojo Mojo: Get your hot on</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap-3.4.1.css" rel="stylesheet" type="text/css">
+<link href="css/darksky.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.min.js"></script> 
+<script src="js/bootstrap-3.4.1.js"></script> 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgBowClITSbbuuRf2rX-yb_pqxiEY_E7k&libraries=places"></script> 
+<script src="js/darksky.js"></script> 
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body style="padding-top: 70px">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" href="#">Ojo Mojo</a></div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="topFixedNavbar1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Locations<span class="caret"></span></a>
+          <ul id="recent-locations" class="dropdown-menu">
+            <li><a href="#" onclick="clearList()">Clear List</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="form-group">
+        <form id="search-form">
+          <input id="pac-input" type="text" onfocus="this.value=''" class="controls form-control" placeholder="Change Address">
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div id="infowindow-content">
+          <div id="place-address"></div>
+          <div id="place-weather"></div>
+          <div id="temp-trivia"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="map"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-12"> 
+      <!-- <div id="currently"></div> -->
+      <table id="forecast">
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
