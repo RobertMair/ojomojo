@@ -2,14 +2,12 @@
 
 // ******************** GLOBALS ********************
 //
-// Declare and/or Initialise all globals.
+// Declare and/or Initialise globals.
 //
 // **************************************************
-// "use strict"; // Defines that JavaScript code should be executed in "strict mode".
 var globData;
 var darkSkyLocation = '';
 var googleLocation = '';
-
 
 // END GLOBALS
 
@@ -42,8 +40,6 @@ $(document).ready(function () {
 function getCurrentLocation() {
   //now get browser geo location
 
-  // geocoder = new google.maps.Geocoder;
-
   if (navigator.geolocation) {
 
     //log the data returned through the browser geolocation api
@@ -52,8 +48,6 @@ function getCurrentLocation() {
     //if able to retrive current location
     function success(pos) {
       var crd = pos.coords;
-
-      //geocoder = new google.maps.Geocoder;
 
       console.log('Your current position is:');
       console.log('Latitude : ' + crd.latitude);
@@ -116,13 +110,12 @@ function createAPILocations(lat, lng) {
 // **************************************************
 function getWeatherData(darkSkyLocation) {
 
-  //  Darkski api key
+  //  Dark Sky API key
   var key = '4e8683792eb9a58afe24a7384aeec495';
-  //  api call. units=si ensures response is in degrees celsius.
+  //  API call. units=si ensures response is in degrees celsius.
   var url = 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/' + key + '/' + darkSkyLocation + '?units=si';
 
   $.getJSON(url, function (data) {
-    //async: false;
     globData = data;
     console.log('Google coordinates' + googleLocation.lat + ' ' + googleLocation.lng);
     console.log("Data object:");
@@ -146,49 +139,7 @@ function getWeatherData(darkSkyLocation) {
     $.get('https://cors-anywhere.herokuapp.com/http://numbersapi.com/' + val + '/trivia?notfound=floor&fragment', function (data) {
       $('#temp-trivia').text('Temperature rounded to ' + val + ' is ' + data + '.');
     });
-
-    // forecast data
-     
-    var days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
-    // loop through the data
-    for (var i = 0; i < data.daily.data.length; i++) {
-      var f = data.daily.data[i]; // the data for one day in the forecast
-      // first create a tr 
-      var row = $("<tr>");
-      var date = new Date(f.time * 1000); // get the forecast data time and convert it to a JS date
-
-      if (i == 0) { // today
-        row.append("<td>Today</td>");
-      } else if (i == 1) { // tomorrow
-        row.append("<td>Tomorrow</td>");
-      } else {
-        row.append("<td>" + days[date.getDay()] + "</td>");
-      }
-
-      row.append("<td>" + f.summary + "</td>");
-
-      var temprange = $("<td class='temprange'>");
-
-      var tempbar = $("<div class='tempbar'>");
-      tempbar.append("<span class='mintemp'>" + Math.round(f.temperatureMin) + "</span>");
-      tempbar.append("<span class='maxtemp'>" + Math.round(f.temperatureMax) + "</span>");
-
-      var tempstart = -5; // start value of the temperature scale
-      var tempscale = 10; // 10 pixels per degree
-      var mintemp = Math.round(f.temperatureMin);
-      var maxtemp = Math.round(f.temperatureMax);
-
-      tempbar.css("left", (mintemp - tempstart) * tempscale + "px");
-      tempbar.css("width", (maxtemp - mintemp) * tempscale + "px");
-
-      temprange.append(tempbar);
-      row.append(temprange);
-
-      // append the tr to the table
-      $("#forecast").append(row);
-
-    };
-
+    
   });
 
 } // END FUNCTION

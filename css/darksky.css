@@ -7,7 +7,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 td.temp {
   text-align: right;
 }
@@ -35,7 +34,6 @@ td.temp {
   height: 75%;
   margin: auto;
 }
-
 .navbar-default {
   background-color: #f83839;
   border-color: #513b41;
@@ -43,8 +41,7 @@ td.temp {
 .navbar-default .navbar-brand {
   color: #ffffff;
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #ffcbcb;
 }
 .navbar-default .navbar-text {
@@ -53,34 +50,27 @@ td.temp {
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #ffcbcb;
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #ffcbcb;
   background-color: #513b41;
 }
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: #ffcbcb;
   background-color: #513b41;
 }
 .navbar-default .navbar-toggle {
   border-color: #513b41;
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #513b41;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
 }
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #ffffff;
 }
 .navbar-default .navbar-link {
@@ -89,30 +79,27 @@ td.temp {
 .navbar-default .navbar-link:hover {
   color: #ffcbcb;
 }
-
 #pac-input {
-    width: 400px;
-    margin: auto;
-    }
-
-#infowindow-content {
-    min-height: 65px;
-    text-align: center;
+  width: 400px;
+  margin: auto;
 }
-
+#infowindow-content {
+  min-height: 65px;
+  text-align: center;
+}
 #goCenterUI, #whereAmIUI {
   background-color: #fff;
   border: 2px solid #fff;
   border-radius: 3px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
   cursor: pointer;
   float: left;
   margin-bottom: 22px;
   text-align: center;
 }
 #goCenterText, #setCenterText {
-  color: rgb(25,25,25);
-  font-family: Roboto,Arial,sans-serif;
+  color: rgb(25, 25, 25);
+  font-family: Roboto, Arial, sans-serif;
   font-size: 15px;
   line-height: 25px;
   padding-left: 5px;
@@ -121,18 +108,14 @@ td.temp {
 #whereAmIUI {
   margin-left: 12px;
 }
-
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #ffffff;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #ffcbcb;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffcbcb;
     background-color: #513b41;
   }
